@@ -10,8 +10,8 @@ namespace Labs_1_QuickSort
   {
     public void Sort(T[] sortingArray, IComparer<T> comparer)
     {
-      if (sortingArray != null && sortingArray.LongLength > 0 && comparer != null)
-        SortedArrayRecurcive(sortingArray, comparer, 0, sortingArray.Length);
+      if ((sortingArray != null && sortingArray.Length > 0) && comparer != null)
+        SortedArrayRecurcive(sortingArray, comparer, 0, sortingArray.Length-1);
     }
 
     private void SortedArrayRecurcive(T[] sortingArray, IComparer<T> comparer, int startPosition, int endPosition)
