@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labs_1_QuickSort
 {
-  class Comparator : IComparer<int>
+  public class ComparerBigger : IComparer<int>
   {
     public int Compare(int left, int right)
     {
@@ -14,6 +14,18 @@ namespace Labs_1_QuickSort
         1 : 
         left < right ? 
         -1 : 
+        0;
+    }
+  }
+
+  public class ComparerLower : IComparer<int>
+  {
+    public int Compare(int left, int right)
+    {
+      return left > right ?
+        -1 :
+        left < right ?
+        1 :
         0;
     }
   }

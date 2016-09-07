@@ -33,16 +33,15 @@ namespace Labs_1_QuickSort
     {
       ISort<int> sort = new QuickSort<int>();
       int[] generateValues = GenerateValues(count);
-      sort.Sort(generateValues, new Comparator());
-      ShowAllValue(generateValues,"SortedValues:");
+      sort.Sort(generateValues, new ComparerBigger());
+      ShowAllValue(generateValues,"Sorted Values:");
     }
 
     static void Main(string[] args)
     {
-      int count;
-      if (args.Length>2)
+      if (args.Length>0)
       {
-        EnteredCount(args[1]);
+        EnteredCount(args[0]);
       }
       else
       {

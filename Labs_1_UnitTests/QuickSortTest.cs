@@ -101,5 +101,20 @@ namespace Labs_1_UnitTests
       quickSort.Sort(testingArray);
       CollectionAssert.AreEqual(new string[] { null, "123", "124234", "a132rer", "adffdg", "adsfd", "afsdf" }, testingArray);
     }
+
+    [TestMethod]
+    public void TestDifferenceComparer()
+    {
+      int[] testingArrayBigger = { 7, 2, 4, -3, 15, 0, -10 };
+      var quickSort = new QuickSortWithComparer<int>();
+      quickSort.Comparer=new ComparerBigger();
+      quickSort.Sort(testingArrayBigger);
+      CollectionAssert.AreEqual(new int[] { -10, -3, 0, 2, 4, 7, 15 }, testingArrayBigger);
+
+      int[] testingArrayLower = { 7, 2, 4, -3, 15, 0, -10 };
+      quickSort.Comparer = new ComparerLower();
+      quickSort.Sort(testingArrayLower);
+      CollectionAssert.AreEqual(new int[] { 15, 7, 4, 2, 0, -3, -10 }, testingArrayLower);
+    }
   }
 }
