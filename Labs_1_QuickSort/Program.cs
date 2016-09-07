@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Labs_1_QuickSort
 {
@@ -47,6 +44,7 @@ namespace Labs_1_QuickSort
       {
         WorkWithUser();
       }
+      Console.WriteLine("Press some to exit");
       Console.Read();
     }
 
@@ -61,6 +59,8 @@ namespace Labs_1_QuickSort
       CountCorrect countCorrent = isCorrectCount(value);
       if (countCorrent.isCorrect)
         WorkSortedTesting(countCorrent.count);
+      else
+        Console.WriteLine("Uncorrect value");
     }
 
     private static CountCorrect isCorrectCount(string checkingValue)

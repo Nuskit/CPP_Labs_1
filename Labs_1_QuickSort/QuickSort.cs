@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Labs_1_QuickSort
 {
@@ -16,10 +12,12 @@ namespace Labs_1_QuickSort
 
     private void SortedArrayRecurcive(T[] sortingArray, IComparer<T> comparer, int startPosition, int endPosition)
     {
-      if (startPosition >= endPosition) return;
-      int median = PartitionSorted(sortingArray, comparer, startPosition, endPosition);
-      SortedArrayRecurcive(sortingArray, comparer, startPosition, median - 1);
-      SortedArrayRecurcive(sortingArray, comparer, median + 1, endPosition);
+      if (startPosition < endPosition)
+      {
+        int median = PartitionSorted(sortingArray, comparer, startPosition, endPosition);
+        SortedArrayRecurcive(sortingArray, comparer, startPosition, median - 1);
+        SortedArrayRecurcive(sortingArray, comparer, median + 1, endPosition);
+      }
     }
 
     int PartitionSorted<T>(T[] sortingArray, IComparer<T> comparer, int startPosition, int endPosition)

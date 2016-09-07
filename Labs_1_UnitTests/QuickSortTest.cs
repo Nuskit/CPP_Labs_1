@@ -1,8 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Labs_1_QuickSort;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace Labs_1_UnitTests
 {
