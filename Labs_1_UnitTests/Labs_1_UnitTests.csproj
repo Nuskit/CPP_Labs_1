@@ -53,6 +53,12 @@
     <Compile Include="QuickSortTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Labs_1_QuickSort\Labs_1_QuickSort.csproj">
+      <Project>{6E9B27E7-AC02-4452-97C7-8A8F92D6C454}</Project>
+      <Name>Labs_1_QuickSort</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
