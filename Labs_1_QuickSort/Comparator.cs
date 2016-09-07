@@ -11,10 +11,10 @@ namespace Labs_1_QuickSort
     public int Compare(int left, int right)
     {
       return left > right ? 
-        left : 
+        1 : 
         left < right ? 
-        right : 
-        left;
+        -1 : 
+        0;
     }
   }
 }

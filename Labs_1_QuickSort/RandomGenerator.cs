@@ -12,7 +12,7 @@ namespace Labs_1_QuickSort
     {
       Random random = new Random();
       for (int i = 0; i < count; i++)
-        values[i] = random.Next();
+        values[i] = random.Next(-10000,10000);
     }
 
     public static int[] Generate(int count)
