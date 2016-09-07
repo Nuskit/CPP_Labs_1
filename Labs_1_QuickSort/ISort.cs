@@ -8,6 +8,6 @@ namespace Labs_1_QuickSort
 {
   public interface ISort<T>
   {
-    void Sort(T[] sortedArray, int startPosition, int endPosition, IComparer<T> comparer);
+    void Sort(T[] sortedArray, IComparer<T> comparer);
   }
 }
