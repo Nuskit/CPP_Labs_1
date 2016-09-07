@@ -10,6 +10,13 @@ namespace Labs_1_QuickSort
   {
     static void Main(string[] args)
     {
+      int count;
+      if (args.Length>2&&int.TryParse(args[1],out count)&&count>0)
+      {
+        ISort<int> sort = new QuickSort<int>();
+        int[] generateValues = RandomGenerator.Generate(count);
+        //sort.Sort(generateValues,);
+      }
     }
   }
 }
