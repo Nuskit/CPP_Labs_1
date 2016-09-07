@@ -96,7 +96,10 @@ namespace Labs_1_UnitTests
     [TestMethod]
     public void TestWhenArrayHaveNullPointer()
     {
-      
+      string[] testingArray = { "123", "afsdf", "a132rer", "adffdg", null, "124234", "adsfd" };
+      var quickSort = new QuickSortWithComparer<string>();
+      quickSort.Sort(testingArray);
+      CollectionAssert.AreEqual(new string[] { null, "123", "124234", "a132rer", "adffdg", "adsfd", "afsdf" }, testingArray);
     }
   }
 }
