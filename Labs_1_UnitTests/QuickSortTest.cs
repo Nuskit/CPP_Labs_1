@@ -1,42 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Labs_1_QuickSort;
 using System.Collections.Generic;
+using BenchmarkDotNet.Running;
 
 namespace Labs_1_UnitTests
 {
   [TestClass]
   public class QuickSortTest
   {
-    private class QuickSortWithComparer<T>
-    {
-      public QuickSortWithComparer(IComparer<T> comparer = null)
-      {
-        Comparer = (comparer == null) ? Comparer<T>.Default : comparer;
-      }
-
-      public ISort<T> QuickSort
-      {
-        get
-        {
-          return new QuickSort<T>();
-        }
-        set
-        {
-          QuickSort = value;
-        }
-      }
-
-      public IComparer<T> Comparer
-      {
-        get; set;
-      }
-
-      public void Sort(T[] array)
-      {
-        QuickSort.Sort(array, Comparer);
-      }
-    }
-
     [TestMethod]
     public void TestCheckWhenZeroCountElements()
     {
@@ -113,6 +84,12 @@ namespace Labs_1_UnitTests
       quickSort.Comparer = new ComparerLower();
       quickSort.Sort(testingArrayLower);
       CollectionAssert.AreEqual(new int[] { 15, 7, 4, 2, 0, -3, -10 }, testingArrayLower);
+    }
+
+    [TestMethod]
+    public void BenchMark()
+    {
+      //BenchmarkRunner.Run<BenchMark>();
     }
   }
 }

@@ -2,7 +2,7 @@
 
 namespace Labs_1_QuickSort
 {
-  class RandomGenerator
+  public class RandomGenerator
   {
     private static void FillValues(int[] values,int count)
     {

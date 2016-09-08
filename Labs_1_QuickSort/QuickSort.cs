@@ -34,12 +34,12 @@ namespace Labs_1_QuickSort
       return --i;                        
     }
 
-    public bool CompareValueLowerOrEquial<T>(IComparer<T> comparer,T first,T second)
+    private bool CompareValueLowerOrEquial<T>(IComparer<T> comparer,T first,T second)
     {
       return comparer.Compare(first, second) <= 0;
     }
 
-    public void Swap<T>(ref T left,ref T right)
+    private void Swap<T>(ref T left,ref T right)
     {
       T temp = left;              
       left = right;                 
